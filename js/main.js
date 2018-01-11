@@ -132,9 +132,9 @@ $('#form').validate({
                     fbq('track', 'CompleteRegistration', {
                         content_name: 'Email Submission'
                     });
-                    $('#thanks').val("Thank you. We will be in contact shortly.");
+                    $('#thanks').text("Thank you. We will be in contact shortly.");
                 } else {
-                    $('#thanks').val(response.msg);
+                    $('#thanks').text(response.msg);
                 }
                 setTimeout(function(){
                     $('#form').addClass('success');
