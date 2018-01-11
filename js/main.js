@@ -116,9 +116,16 @@ $('#form').validate({
             cache: false,
             dataType: 'json',
             contentType: "application/json; charset=utf-8",
-            error: function(response) {
+            success: function(response) {
+                if (response.result == "success") {
+                    fbq('track', 'CompleteRegistration', {
+                        content_name: 'Email Submission'
+                    });
+                    $('#thanks').val("Thank you. We will be in contact shortly.");
+                } else {
+                    $('#thanks').val(response.msg);
+                }
                 setTimeout(function(){
-                    $('#thanks').text("Could not connect to the registration server. Please try again later.");
                     $('#form').addClass('success');
                     setTimeout(function(){
                         $('#form').removeClass('sending success');
@@ -126,32 +133,6 @@ $('#form').validate({
                         $('form button[type="submit"]').prop('disabled', false);
                     }, 2000);
                 }, 500);
-            },
-            success: function(response) {
-                if (response.result == "success") {
-                    fbq('track', 'CompleteRegistration', {
-                        content_name: 'Email Submission'
-                    });
-                    setTimeout(function(){
-                        $('#thanks').text("Thank you. We will be in contact shortly.");
-                        $('#form').addClass('success');
-                        setTimeout(function(){
-                            $('#form').removeClass('sending success');
-                            $('form input[type="text"]').val('')
-                            $('form button[type="submit"]').prop('disabled', false);
-                        }, 2000);
-                    }, 500);
-                } else {
-                    setTimeout(function(){
-                        $('#thanks').text(response.msg);
-                        $('#form').addClass('success');
-                        setTimeout(function(){
-                            $('#form').removeClass('sending success');
-                            $('form input[type="text"]').val('')
-                            $('form button[type="submit"]').prop('disabled', false);
-                        }, 2000);
-                    }, 500);
-                }
             }            
         });
     }
