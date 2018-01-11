@@ -113,6 +113,7 @@ $('#form').validate({
             url: form.action,
             type: form.method,
             data: $(form).serialize(),
+            dataType: 'jsonp',
             success: function(response) {
             	fbq('track', 'CompleteRegistration', {
             		content_name: 'Email Submission'
