@@ -116,6 +116,17 @@ $('#form').validate({
             cache: false,
             dataType: 'json',
             contentType: "application/json; charset=utf-8",
+            error: function(response) {
+                setTimeout(function(){
+                    $('#thanks').text("Could not connect to the registration server. Please try again later.");
+                    $('#form').addClass('success');
+                    setTimeout(function(){
+                        $('#form').removeClass('sending success');
+                        $('form input[type="text"]').val('')
+                        $('form button[type="submit"]').prop('disabled', false);
+                    }, 2000);
+                }, 500);
+            },
             success: function(response) {
                 if (response.result == "success") {
                     fbq('track', 'CompleteRegistration', {
