@@ -114,6 +114,7 @@ $('#form').validate({
             type: form.method,
             data: $(form).serialize(),
             dataType: 'jsonp',
+            jsonp: 'c',
             success: function(response) {
             	fbq('track', 'CompleteRegistration', {
             		content_name: 'Email Submission'
