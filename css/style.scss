@@ -1109,7 +1109,7 @@ Desktop
 >>---------->
 */
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1440px) {
     #primary-content {
         width: 700px;
     }
@@ -1121,7 +1121,7 @@ Desktop
     }
 }
 
-@media screen and (max-width: 1023px) and (min-width: 768px) {
+@media screen and (max-width: 1439px) and (min-width: 768px) {
     #primary-content {
         width: 500px;
     }
