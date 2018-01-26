@@ -131,7 +131,7 @@ path {
 input,
 button {
     outline: none;
-    border-radius: 0 !important;
+    border-radius: 0;
     -webkit-appearance: none;
     border:none;
     padding: 0;
@@ -159,35 +159,14 @@ Reuseable Elements
 
 a.white-paper {
     position: relative;
-    display: table;
-    background-color:#3beef9;
-    font-weight: 800;
-    padding: 20px 45px 20px 25px;
-    border-radius: 30px;
-    color:#000;
-    text-transform: uppercase;
-    font-size: 12px;
-    letter-spacing: .11em;
-}
-
-a.white-paper svg {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-a.white-paper svg path {
-    fill:#000;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    color: #000;
+    border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 .no-touchevents a.white-paper:hover {
-    background-color:#000;
-    color:#3beef9;
-}
-
-.no-touchevents a.white-paper:hover svg path {
-    fill:#3beef9;
+    border-bottom: 2px solid #3beef9;
 }
 
 /*
@@ -996,24 +975,40 @@ input:-webkit-autofill {
 }
 
 #form .submit {
-    width: 30px;
-    height: 27px;
     position: relative;
+    display: table;
+    background-color:#3beef9;
+    font-weight: 800;
+    padding: 20px 45px 20px 25px;
+    border-radius: 30px;
+    color:#000;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: .11em;
 }
 
-#form .submit .arrow {
+#form .submit svg {
     position: absolute;
-    top: 5px;
-    right: 0;
-    transition: right 300ms ease, opacity 300ms ease, visibility 300ms ease;
-}
-
-.no-touchevents #form:not(.sending) .submit:hover .arrow {
     right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.no-touchevents #form:not(.sending) .submit:hover .arrow path {
+#form .submit svg path {
+    fill:#000;
+}
+
+.no-touchevents #form .submit:hover {
+    background-color:#000;
+    color:#3beef9;
+}
+
+.no-touchevents #form .submit:hover svg path {
     fill:#3beef9;
+}
+
+.no-touchevents #form:not(.sending) .submit:hover {
+    cursor: pointer;
 }
 
 #form.sending .input-group .inputs {
