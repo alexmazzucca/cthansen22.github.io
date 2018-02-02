@@ -118,7 +118,7 @@ $('#form').validate({
             contentType: "application/json; charset=utf-8",
             error: function(response) {
                 setTimeout(function(){
-                    $('#thanks').text("Could not connect to the registration server. Please try again later.");
+                    $('#thanks').html("Could not connect to the registration server. Please try again later.");
                     $('#form').addClass('success');
                     setTimeout(function(){
                         $('#form').removeClass('sending success');
@@ -132,9 +132,9 @@ $('#form').validate({
                     fbq('track', 'CompleteRegistration', {
                         content_name: 'Email Submission'
                     });
-                    $('#thanks').text("Thank you. We will be in contact shortly.");
+                    $('#thanks').html("Thank you. We will be in contact shortly.");
                 } else {
-                    $('#thanks').text(response.msg);
+                    $('#thanks').html(response.msg);
                 }
                 setTimeout(function(){
                     $('#form').addClass('success');
@@ -142,7 +142,7 @@ $('#form').validate({
                         $('#form').removeClass('sending success');
                         $('form input[type="text"]').val('')
                         $('form button[type="submit"]').prop('disabled', false);
-                    }, 2000);
+                    }, 3000);
                 }, 500);
             }            
         });

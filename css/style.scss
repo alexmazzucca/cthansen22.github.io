@@ -19,6 +19,8 @@ Development Notes
 /*
  * Font 1 Weights:
  * >>------------->
+ * Regulat      400
+ * Demi         600
  * Bold         700
  * Extra Bold   800
  */
@@ -151,22 +153,70 @@ img {
     height: auto;
 }
 
+input {
+    font-family: "din-2014",sans-serif;
+}
+
+/*
+Desktop
+>>---------->
+*/
+
+@media screen and (min-width: 768px) {
+    .mobile-only {
+        display: none !important;
+    }
+}
+
+/*
+Mobile
+>>---------->
+*/
+
+@media screen and (max-width: 767px) {
+    .desktop-only {
+        display: none !important;
+    }
+}
+
 /*
 >>================================================================================>
 Reuseable Elements
 >>================================================================================>
 */
 
-a.white-paper {
+.blue-button {
     position: relative;
-    font-family: 'Source Code Pro', monospace;
     font-weight: 600;
     color: #000;
-    border-bottom: 2px solid rgb(0, 0, 0);
+    position: relative;
+    display: table;
+    background-color:#3beef9;
+    font-weight: 800;
+    padding: 20px 45px 20px 25px;
+    border-radius: 30px;
+    color:#000;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: .11em;
+    box-shadow: 4.015px 4.459px 29px 0px rgba(48, 95, 129, 0.18);
+    line-height: 1em;
 }
 
-.no-touchevents a.white-paper:hover {
-    border-bottom: 2px solid #3beef9;
+.blue-button svg {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.no-touchevents .blue-button:hover {
+    background-color:#000;
+    color:#3beef9;
+}
+
+.no-touchevents .blue-button:hover svg path {
+    fill:#3beef9;
 }
 
 /*
@@ -523,7 +573,7 @@ Main UI Components
     /* Burger */
 
     #burger {
-        position: absolute;
+        position: fixed;
         right: 0;
         background-color:#000;
         width: 52px;
@@ -584,7 +634,7 @@ Menu
 >>================================================================================>
 */
 
-/* Secondary Navigation */
+/* Aside */
 
 aside {
     text-transform: uppercase;
@@ -613,6 +663,13 @@ aside li:after {
 
 aside li:last-child:after {
     display: none;
+}
+
+/* Primary Navigation */
+
+#primary-nav a {
+    font-weight: 600;
+    letter-spacing: .05em;
 }
 
 /* Social Navigation */
@@ -661,8 +718,26 @@ Desktop
 */
 
 @media screen and (min-width: 768px) {
-    #menu .white-paper {
-        display: none;
+
+    /* Primary Navigation */
+
+    #primary-nav {
+        position: absolute;
+        top: 42px;
+        right: 42px;
+    }
+
+    #primary-nav li {
+        display: inline-block;
+        margin-left: 30px;
+    }
+
+    #primary-nav li a {
+        color:#000;
+    }
+    
+    .no-touchevents #primary-nav li a:hover {
+        color: #3beef9
     }
 
     /* Social Navigation */
@@ -719,7 +794,7 @@ Desktop
         height: 18px;
     }
 
-    /* Secondary Navigation */
+    /* Aside */
 
     aside {
         position: absolute;
@@ -751,6 +826,9 @@ Mobile
         background-image:url(../../img/menu-bg.jpg);
         background-size: cover;
         background-position: center;
+        overflow: auto;
+        -ms-overflow-style: scrollbar;
+        -webkit-overflow-scrolling: touch;
     }
 
     #menu:after {
@@ -774,6 +852,8 @@ Mobile
         visibility: visible;
     }
 
+    /* Aside */
+
     aside {
         text-align: center;
         margin-bottom: 58px;
@@ -782,6 +862,35 @@ Mobile
 
     aside li:after {
         color:#fff;
+    }
+
+    /* Primary Navigation */
+
+    #primary-nav {
+        border-top: 1px solid rgba(255,255,255,.25);
+        margin-bottom: 40px;
+    }
+
+    #primary-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #primary-nav li {
+        width: 50%;
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid rgba(255,255,255,.25);
+    }
+
+    #primary-nav li:nth-child(odd){
+        border-right: 1px solid rgba(255,255,255,.25);
+    }
+
+    #primary-nav a {
+        line-height: 1em;
+        color:#fff;
+        font-size: 18px;
     }
 
     /* Social Navigation */
@@ -798,7 +907,7 @@ Mobile
     #social-nav li {
         display: block;
         width: 25%;
-        margin-bottom: 45px;
+        margin-bottom: 47px;
         height: 31px;
         border-right: 1px solid rgba(255,255,255,.25);
         text-align: center;
@@ -859,8 +968,8 @@ Mobile
         height: 19px;
     }
 
-    #menu .white-paper {
-        margin: 0 auto;
+    #menu .blue-button {
+        margin: 0 auto 30px auto;
     }
 }
 
@@ -888,7 +997,7 @@ Primary Content
 /* Form */
 
 #form * {
-    font-family: 'Source Code Pro', monospace;
+    /*font-family: 'Source Code Pro', monospace;*/
     font-weight: 600;
 }
 
@@ -943,6 +1052,20 @@ Primary Content
     color: #e040fb;
 }
 
+#form .input-group .output,
+#form .input-group #thanks {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#form .input-group #thanks a {
+    display: none;
+}
+
+#form .input-group #thanks a:hover {
+    color:#3beef9;
+}
+
 #email-field {
     font-size: 12px;
     letter-spacing: .07em;
@@ -985,6 +1108,7 @@ input:-webkit-autofill {
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: .11em;
+    box-shadow: 4.015px 4.459px 29px 0px rgba(48, 95, 129, 0.18);
 }
 
 #form .submit svg {
@@ -1046,6 +1170,7 @@ input:-webkit-autofill {
     display: inline-block;
     vertical-align: middle;
     float: left;
+    background-color:#fff;
 }
 
 #form .checkbox.error .indicator {
@@ -1073,6 +1198,8 @@ input:-webkit-autofill {
     display: block;
     line-height: 1.6em;
     letter-spacing: .08em;
+    font-weight: 400;
+    font-size: 15px;
 }
 
 #form .checkbox.error .message {
@@ -1164,7 +1291,7 @@ Desktop
     /* Form */
 
     #form {
-        margin-top: 50px;
+        margin-top: 70px;
     }
 
     /* Input Group */
