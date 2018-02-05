@@ -249,14 +249,7 @@ Desktop
 */
 
 @media screen and (min-width: 768px) {
-    main {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        min-height: 860px;
-        overflow: hidden;
-        top: 0;
-    }
+    
 }
 
 /*
@@ -304,7 +297,7 @@ Main UI Components
     width: 100%;
     height: 100%;
     overflow: hidden;
-    top:0;
+    top: 0;
 }
 
 #background-video video {
@@ -575,6 +568,7 @@ Main UI Components
     #burger {
         position: fixed;
         right: 0;
+        top: 0;
         background-color:#000;
         width: 52px;
         height: 52px;
@@ -672,6 +666,10 @@ aside li:last-child:after {
     letter-spacing: .05em;
 }
 
+#primary-nav li.current-menu-item a {
+    color: #3beef9
+}
+
 /* Social Navigation */
 
 #social-nav a {
@@ -736,14 +734,18 @@ Desktop
         color:#000;
     }
     
-    .no-touchevents #primary-nav li a:hover {
+    .no-touchevents #primary-nav li a:hover{
         color: #3beef9
+    }
+
+    #menu li.home {
+        display: none;
     }
 
     /* Social Navigation */
 
     #social-nav {
-        position: absolute;
+        position: fixed;
         top: 50%;
         left: 35px;
         transform: translateY(-50%);
@@ -831,7 +833,7 @@ Mobile
         -webkit-overflow-scrolling: touch;
     }
 
-    #menu:after {
+    #menu li.home {
         content:'';
         position: absolute;
         width: 205px;
@@ -841,6 +843,27 @@ Mobile
         top: 30px;
         left: 50%;
         margin-left: -102px;
+        border: none !important;
+    }
+
+    #menu li.home span {
+        border: 0;
+        clip: rect(0 0 0 0);
+        -webkit-clip-path: inset(50%);
+        clip-path: inset(50%);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        white-space: nowrap;
+    }
+
+    #menu li.home a {
+        display: block;
+        width: 205px;
+        height: 210px;
     }
 
     #menu .container {
@@ -883,7 +906,7 @@ Mobile
         border-bottom: 1px solid rgba(255,255,255,.25);
     }
 
-    #primary-nav li:nth-child(odd){
+    #primary-nav li:nth-child(even){
         border-right: 1px solid rgba(255,255,255,.25);
     }
 
@@ -975,21 +998,21 @@ Mobile
 
 /*
 >>================================================================================>
-Primary Content
+Front Page (Home)
 >>================================================================================>
 */
 
-#primary-content > div {
+#front-page main > div {
     position: relative;
 }
 
-#primary-content > div:before {
+#front-page main > div:before {
     content:'/';
     position: absolute;
     font-weight: 800;
 }
 
-#primary-content h2 {
+#front-page main h2 {
     font-weight: 700;
     margin: 0;
 }
@@ -1232,11 +1255,11 @@ Desktop
 */
 
 @media screen and (min-width: 1400px) {
-    #primary-content {
+    #front-page main {
         width: 700px;
     }
 
-    #primary-content h2 {
+    #front-page main h2 {
         font-size:72px;
         line-height: 1.2em;
         letter-spacing: .025em;
@@ -1244,11 +1267,11 @@ Desktop
 }
 
 @media screen and (max-width: 1399px) and (min-width: 768px) {
-    #primary-content {
+    #front-page main {
         width: 500px;
     }
 
-    #primary-content h2 {
+    #front-page main h2 {
         font-size: 50px;
         line-height: 1.2em;
         letter-spacing: .025em;
@@ -1256,7 +1279,16 @@ Desktop
 }
 
 @media screen and (min-width: 768px) {
-    #primary-content {
+    #front-page {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        min-height: 860px;
+        overflow: hidden;
+        top: 0;
+    }
+
+    #front-page main {
         position: absolute;
         left: 50%;
         top: 50%;
@@ -1264,26 +1296,20 @@ Desktop
         margin-top: -28px;
     }
 
-    #primary-content > div:after {
-        content:'/';
-        position: absolute;
-        font-weight: 800;
-    }
-
-    #primary-content > div:before,
-    #primary-content > div:after {
+    #front-page main > div:before,
+    #front-page main > div:after {
         content:'/';
         position: absolute;
         font-size: 70px;
         font-weight: 800;
     }
 
-    #primary-content > div:before {
+    #front-page main > div:before {
         top: -30px;
         left: -60px;
     }
 
-    #primary-content > div:after {
+    #front-page main > div:after {
         bottom: -5px;
         right: -50px;
     }
@@ -1329,17 +1355,17 @@ Mobile
 */
 
 @media screen and (max-width: 767px) {
-    #primary-content {
+    #front-page main {
         padding: 145px 40px 0 40px;
     }
 
-    #primary-content h2 {
+    #front-page main h2 {
         position: relative;
         display: block;
         margin-bottom: 44px;
     }
 
-    #primary-content h2:after {
+    #front-page main h2:after {
         content:'/';
         position: absolute;
         font-weight: 800;
@@ -1347,17 +1373,17 @@ Mobile
         bottom: -10px;
     }
 
-    #primary-content > div:before,
-    #primary-content > h2:after {
+    #front-page main > div:before,
+    #front-page main > h2:after {
         font-size: 40px;
     }
 
-    #primary-content > div:before {
+    #front-page main > div:before {
         top: -23px;
         left: -30px;
     }
 
-    #primary-content h2 {
+    #front-page main h2 {
         font-size:31px;
         line-height: 1.25em;
         letter-spacing: .01em;
@@ -1395,8 +1421,147 @@ Mobile
         margin-top: -1px;
         margin-left: 32px;
     }
+}
 
+/*
+>>================================================================================>
+Sub Page
+>>================================================================================>
+*/
 
+#sub-page main > .container {
+    max-width: 920px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Text Styles */
+
+#sub-page main h1:before,
+#sub-page main h1:after {
+    content:'/';
+    position: absolute;
+    font-weight: 800;
+}
+
+#sub-page main h1:before {
+    top: 0;
+    left: 0;
+}
+
+#sub-page main h1:after {
+    bottom: 0;
+    right: 0;
+}
+
+#sub-page main h1 {
+    display: inline-block;
+    position: relative;
+}
+
+#sub-page main p {
+    line-height: 1.9em;
+}
+
+/* Background Video */
+
+#sub-page #background-video {
+    position: fixed;
+}
+
+#sub-page #background-video video {
+    top: 0;
+    transform: translateY(-40%);
+}
+
+/*
+Desktop
+>>---------->
+*/
+
+@media screen and (min-width: 768px) {
+
+    #sub-page main {
+        margin-top: 120px;
+        margin-bottom: 60px;
+    }
+
+    #sub-page main > .container {
+        padding: 0 80px;
+    }
+
+    /* Text Sizes */
+
+    #sub-page main h1:before,
+    #sub-page main h1:after {
+        font-size: 76px
+    }
+
+    #sub-page main h1 {
+        font-size: 75px;
+        padding-left: 80px;
+        padding-right: 80px;
+        margin-bottom: 57px;
+    }
+
+    #sub-page main p.lead-in {
+        font-size: 31px;
+        margin-bottom: 70px;
+    }
+
+    #sub-page main h2 {
+        font-size: 22px;
+        margin-bottom: 12px;
+    }
+
+    #sub-page main p {
+        font-size: 22px;
+    }
+}
+
+/*
+Mobile
+>>---------->
+*/
+
+@media screen and (max-width: 767px) {
+    #sub-page main {
+        margin-top: 140px;
+        margin-bottom: 30px;
+    }
+
+    #sub-page main > .container {
+        padding: 0 40px;
+    }
+
+    /* Text Sizes */
+
+    #sub-page main h1:before,
+    #sub-page main h1:after {
+        font-size: 31px;
+    }
+
+    #sub-page main h1 {
+        font-size: 31px;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 22px;
+    }
+
+    #sub-page main p.lead-in {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    #sub-page main h2 {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    #sub-page main p {
+        font-size: 14px;
+    }
 }
 
 /*

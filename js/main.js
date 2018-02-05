@@ -31,29 +31,31 @@ Loading
 */
 
 $(window).on('load', function(){
-    $('body').addClass('page-loaded');
-    setTimeout(function(){
-        $('#animated-logo .logo .vertical:nth-child(1)').addClass('animate');
+    if($('#loading').length){
+        $('body').addClass('page-loaded');
         setTimeout(function(){
-            $('#animated-logo .logo .vertical:nth-child(2)').addClass('animate');
+            $('#animated-logo .logo .vertical:nth-child(1)').addClass('animate');
             setTimeout(function(){
-                $('#animated-logo .logo .horizontal').addClass('animate');
+                $('#animated-logo .logo .vertical:nth-child(2)').addClass('animate');
                 setTimeout(function(){
-                    $('#animated-logo .logo .circle').addClass('animate');
+                    $('#animated-logo .logo .horizontal').addClass('animate');
                     setTimeout(function(){
-                        $('#animated-logo .flare').addClass('animate');
-                    }, 500);
-                    setTimeout(function(){
-                        $('#space-curtains').addClass('animate');
-                        $('#animated-logo').addClass('animate');
+                        $('#animated-logo .logo .circle').addClass('animate');
                         setTimeout(function(){
-                            $('#loading').remove();
-                        }, 2000);
-                    }, 3000);
-                }, 750);
+                            $('#animated-logo .flare').addClass('animate');
+                        }, 500);
+                        setTimeout(function(){
+                            $('#space-curtains').addClass('animate');
+                            $('#animated-logo').addClass('animate');
+                            setTimeout(function(){
+                                $('#loading').remove();
+                            }, 2000);
+                        }, 3000);
+                    }, 750);
+                }, 250);
             }, 250);
-        }, 250);
-    }, 0);
+        }, 0);
+    }
 });
 
 //$('#loading').remove();
