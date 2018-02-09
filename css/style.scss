@@ -70,15 +70,15 @@ body {
     background-color:#fff;
 }
 
-body.disabled {
+body.mobile-menu-active {
     margin: 0;
     height: 100%;
     overflow: hidden;
 }
 
-.touchevents body.disabled {
+/*.touchevents body.disabled {
     position: fixed;
-}
+}*/
 
 .visuallyhidden {
     border: 0;
@@ -306,6 +306,18 @@ Main Framework
     max-width: 1360px;
 }
 
+.sticky-toolbar {
+    content:'';
+    position: fixed;
+    background-color:#fff;
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    box-shadow: 3.657px 3.41px 43px 0px rgba(0, 0, 0, 0.08);
+    z-index: 10;
+}
+
 /*
 Desktop
 >>---------->
@@ -314,6 +326,10 @@ Desktop
 @media screen and (min-width: 768px) {
     .container {
         padding: 0 80px;
+    }
+
+    .sticky-toolbar {
+        height: 62px;
     }
 }
 
@@ -326,24 +342,28 @@ Mobile
     .container {
         padding: 0 29px;
     }
+
+    .sticky-toolbar {
+        height: 52px;
+    }
 }
 
 /*
 >>================================================================================>
-Main UI Components
+UI Components
 >>================================================================================>
 */
 
 /* All Resolutions 
  * >>-------------> */
 
-#site-logo {
+.site-logo {
     background-image: url(../../img/site-logo.svg);
     margin: 0;
     position: absolute;
 }
 
-#site-logo span {
+.site-logo span {
     border: 0;
     clip: rect(0 0 0 0);
     -webkit-clip-path: inset(50%);
@@ -584,13 +604,23 @@ Main UI Components
  * >>-------------> */
  
 @media screen and (min-width: 768px) {
-    #site-logo {
+    .site-logo {
         z-index: 2;
         width: 216px;
         height: 55px;
         background-size: 216px 55px;
         top: 30px;
         left: 40px;
+    }
+
+    .sticky-toolbar .site-logo {
+        position: absolute;
+        width: 148px;
+        height: 38px;
+        background-size: 148px 38px;
+        top: 11px;
+        left: 29px;
+        z-index: 10;
     }
 
     @keyframes space-curtains-1 {
@@ -610,13 +640,17 @@ Main UI Components
  * >>-------------> */
 
 @media screen and (max-width: 767px) {
-    #site-logo {
+    .site-logo {
         z-index: 2;
         width: 119px;
         height: 31px;
         background-size: 119px 31px;
         top: 18px;
             left: 25px;
+    }
+
+    .sticky-toolbar .site-logo {
+        top: 11px;
     }
 
     @keyframes space-curtains-1 {
@@ -633,21 +667,21 @@ Main UI Components
 
     /* Burger */
 
-    #burger {
-        position: fixed;
+    .burger {
+        position: absolute;
         right: 0;
         top: 0;
         background-color:#000;
         width: 52px;
         height: 52px;
-        z-index: 4;
+        z-index: 12;
     }
 
-    .mobile-menu-active #burger {
+    .mobile-menu-active .burger {
         position: fixed;
     }
 
-    #burger span {
+    .burger span {
         display: block;
         background: #ffffff;
         width: 22px;
@@ -660,30 +694,30 @@ Main UI Components
         transition: all 300ms ease;
     }
 
-    #burger span:nth-child(1) {
+    .burger span:nth-child(1) {
         top: 17px;
     }
 
-    #burger span:nth-child(2) {
+    .burger span:nth-child(2) {
         top: 26px;
         left: 40%;
     }
 
-    #burger span:nth-child(3) {
+    .burger span:nth-child(3) {
         top: 35px;
     }
 
-     .mobile-menu-active #burger span:nth-child(1) {
+     .mobile-menu-active .burger span:nth-child(1) {
          -webkit-transform: translateY(9px) translateX(0) rotate(45deg);
              -ms-transform: translateY(9px) translateX(0) rotate(45deg);
                  transform: translateY(9px) translateX(0) rotate(45deg);
      }
 
-    .mobile-menu-active #burger span:nth-child(2) {
+    .mobile-menu-active .burger span:nth-child(2) {
          opacity: 0;
      }
 
-     .mobile-menu-active #burger span:nth-child(3) {
+     .mobile-menu-active .burger span:nth-child(3) {
          -webkit-transform: translateY(-9px) translateX(0) rotate(-45deg);
              -ms-transform: translateY(-9px) translateX(0) rotate(-45deg);
                  transform: translateY(-9px) translateX(0) rotate(-45deg);
@@ -692,19 +726,19 @@ Main UI Components
 
 /*
 >>================================================================================>
-Menus
+Menu
 >>================================================================================>
 */
 
 /* Primary Navigation */
 
-#primary-nav a {
+.primary-nav a {
     font-weight: 600;
     letter-spacing: .05em;
 }
 
-#primary-nav li.current-menu-item a {
-    color: #3beef9
+.primary-nav li.current-menu-item a {
+    color: #8c97a2
 }
 
 #menu nav.social a {
@@ -720,22 +754,29 @@ Desktop
 
     /* Primary Navigation */
 
-    #primary-nav {
+    .primary-nav {
         position: absolute;
         top: 42px;
         right: 42px;
     }
 
-    #primary-nav li {
+    .sticky-toolbar .primary-nav {
+        position: absolute;
+        top: 22px;
+        right: 42px;
+        z-index: 10;
+    }
+
+    .primary-nav li {
         display: inline-block;
         margin-left: 30px;
     }
 
-    #primary-nav li a {
+    .primary-nav li a {
         color:#000;
     }
     
-    .no-touchevents #primary-nav li a:hover{
+    .no-touchevents .primary-nav li a:hover{
         color: #8c97a2
     }
 
@@ -764,11 +805,12 @@ Mobile
 */
 
 @media screen and (max-width: 767px) {
+
     #menu {
         position: fixed;
         width: 100%;
         height: 100%;
-        z-index: 3;
+        z-index: 11;
         top: 0;
         background-color:#000;
         opacity: 0;
@@ -826,28 +868,32 @@ Mobile
 
     /* Primary Navigation */
 
-    #primary-nav {
+    .primary-nav {
         border-top: 1px solid rgba(255,255,255,.25);
         margin-bottom: 40px;
     }
 
-    #primary-nav ul {
+    .sticky-toolbar .primary-nav {
+        display: none;
+    }
+
+    .primary-nav ul {
         display: flex;
         flex-wrap: wrap;
     }
 
-    #primary-nav li {
+    .primary-nav li {
         width: 50%;
         text-align: center;
         padding: 15px 0;
         border-bottom: 1px solid rgba(255,255,255,.25);
     }
 
-    #primary-nav li:nth-child(even){
+    .primary-nav li:nth-child(even){
         border-right: 1px solid rgba(255,255,255,.25);
     }
 
-    #primary-nav a {
+    .primary-nav a {
         line-height: 1em;
         color:#fff;
         font-size: 18px;
@@ -1201,6 +1247,8 @@ Form
     border-color:#e040fb;
 }
 
+/* Placeholder */
+
 #form .input-group .inputs ::-webkit-input-placeholder {
     color: #868686;
 }
@@ -1216,6 +1264,8 @@ Form
 #form .input-group .inputs :-moz-placeholder {
     color: #868686;
 }
+
+/* Error */
 
 #form .input-group .inputs #email-field.error::-webkit-input-placeholder {
     color: #e040fb;
@@ -1624,6 +1674,10 @@ Footer
     line-height: 1.4em;
     font-weight: 400;
     min-height: 20px;
+}
+
+#footer #form .checkbox.error .message {
+    color:#e040fb;
 }
 
 /*
