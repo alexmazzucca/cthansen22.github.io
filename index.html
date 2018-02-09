@@ -132,26 +132,15 @@
 
             <section id="menu">
                 <div class="container">
-
-                    <!-- Remove for now
-                    <aside>
-                        <ul>
-                            <li>Connect</li>
-                            <li>Participate</li>
-                            <li>Power-Up</li>
-                        </ul>
-                    </aside>
-                    -->
-                    
                     <nav id="primary-nav">
                         <ul>
                             <li class="home">
-                                <a href="/">
+                                <a href="index.html">
                                     <span>Home</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">Team</a>
+                                <a href="team.html">Team</a>
                             </li>
                             <li>
                                 <a href="#">Blog</a>
@@ -168,7 +157,7 @@
                         </ul>
                     </nav>
 
-                    <nav id="social-nav">
+                    <nav class="social">
                         <ul>
                             <li>
                                 <a class="email" href="mailto:hypernet@hypernetwork.io" target="_blank" rel="noopener">
@@ -203,18 +192,6 @@
                                 </a>
                             </li>
                             <li>
-                            </li>
-                            <!-- Remove reddit for now
-                            <li>
-                                <a class="reddit" href="https://www.reddit.com/r/HypernetComputing" target="_blank" rel="noopener">
-                                    <svg height="476.4" viewBox="0 0 535.8 476.4" width="535.8" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M535.8 241.8c-1.2-32.4-28.4-57.7-60.9-56.6-14.4.5-28.1 6.4-38.5 16.3-45.8-31.2-99.6-48.3-154.9-49.5l26.1-125.5 86.1 18.1c2.4 22.1 22.2 38.1 44.3 35.7 22.1-2.4 38.1-22.2 35.7-44.3-2.4-22.1-22.2-38.1-44.3-35.7-12.7 1.3-24.1 8.7-30.4 19.7l-98.6-19.7c-6.7-1.5-13.4 2.7-14.9 9.5v.2l-29.7 139.6c-56 .9-110.5 18.1-156.9 49.5-23.6-22.2-60.8-21.1-83 2.6-22.2 23.6-21.1 60.8 2.6 83 4.6 4.3 9.9 8 15.8 10.6-.4 5.9-.4 11.8 0 17.7 0 90.1 105 163.4 234.5 163.4s234.5-73.2 234.5-163.4c.4-5.9.4-11.8 0-17.7 20.2-10.1 32.9-30.9 32.5-53.5zm-402.3 40.3c0-22.2 18.1-40.3 40.3-40.3 22.2 0 40.3 18.1 40.3 40.3 0 22.2-18.1 40.3-40.3 40.3-22.3-.2-40.3-18.1-40.3-40.3zm233.7 112.2v-1.6c-28.6 21.5-63.6 32.5-99.4 31-35.8 1.5-70.8-9.5-99.4-31-3.8-4.6-3.1-11.5 1.5-15.3 4-3.3 9.7-3.3 13.8 0 24.2 17.7 53.7 26.7 83.7 25.3 30 1.6 59.6-7 84.1-24.5 4.4-4.3 11.6-4.2 15.9.2s4.2 11.6-.2 15.9zm-5.4-71.9c-22.3-.2-40.3-18.1-40.3-40.3s18.1-40.3 40.3-40.3c22.2 0 40.3 18.1 40.3 40.3 0 22.2-18.1 40.3-40.3 40.3z"/>
-                                    </svg>
-                                    <span>Reddit</span>
-                                </a>
-                            </li>
-                            -->
-                            <li>
                                 <a class="telegram" href="https://t.me/joinchat/H-DkTAx1R8A0HvY6vNs5Xw" target="_blank" rel="noopener">
                                     <svg height="12.6" viewBox="0 0 14.4 12.6" width="14.4" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M.3 6l3.3 1.2 1.3 4.1c.1.3.4.4.6.2l1.9-1.5c.2-.2.5-.2.7 0l3.3 2.4c.2.2.6 0 .6-.2l2.5-11.8c.1-.3-.2-.6-.5-.4l-13.7 5.3c-.4.1-.4.6 0 .7zm4.4.6l6.5-4c.1-.1.2.1.1.2l-5.4 5c-.2.2-.3.4-.3.6l-.2 1.4c0 .2-.3.2-.3 0l-.7-2.5c-.1-.2 0-.5.3-.7z" id="XMLID_3_"/>
@@ -229,8 +206,6 @@
                                     </svg>
                                     <span>Slack</span>
                                 </a>
-                            </li>
-                            <li>
                             </li>
                         </ul>
                     </nav>
@@ -250,7 +225,7 @@
             -->
 
             <main>
-                <div class="container">
+                <div>
                     <h2>Hypernet: Connecting the computing power of any device around the world.</h2>
                     
                     <!--Form-->
@@ -267,12 +242,12 @@
                         </div>
                         <div id="form-bottom">
                             <div class="input-group">
-                                <button type="button" class="checkbox active">
+                                <div class="checkbox active">
                                     <span class="indicator"></span>
                                     <span class="message">I agree to receive communication from Hypernet.</span>
                                     <input class="agree" type="hidden" name="agree" value="I agree to receive communication from Hypernet.">
-                                </button>
-                                <div id="thanks">You're in! Welcome to Hypernet. We will be in contact shortly.</div>
+                                </div>
+                                <div id="output">You're in! Welcome to Hypernet. We will be in contact shortly.</div>
                             </div>
                             <button class="blue-button" type="submit" name="submit">
                                 <svg height="13" width="11" viewBox="0 0 10.1 9" xmlns="http://www.w3.org/2000/svg">

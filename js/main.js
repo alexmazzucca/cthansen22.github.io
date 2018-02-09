@@ -14,6 +14,20 @@ $('#burger').on('click', function(){
 
 /*
 >>================================================================================>
+Team
+>>================================================================================>
+*/
+
+$('#team .member').each(function(){
+    var $member = $(this);
+    $(this).find('.photo').add($(this).find('button.close')).on('click', function(){
+        $member.toggleClass('active');
+        $('body').toggleClass('disabled')
+    })
+})
+
+/*
+>>================================================================================>
 Facebook Tracking
 >>================================================================================>
 */
@@ -120,7 +134,7 @@ $('#form').validate({
             contentType: "application/json; charset=utf-8",
             error: function(response) {
                 setTimeout(function(){
-                    $('#thanks').html("Could not connect to the registration server. Please try again later.");
+                    $('#output').html("Could not connect to the registration server. Please try again later.");
                     $('#form').addClass('success');
                     setTimeout(function(){
                         $('#form').removeClass('sending success');
@@ -134,9 +148,9 @@ $('#form').validate({
                     fbq('track', 'CompleteRegistration', {
                         content_name: 'Email Submission'
                     });
-                    $('#thanks').html("Thank you. We will be in contact shortly.");
+                    $('#output').html("Thank you. We will be in contact shortly.");
                 } else {
-                    $('#thanks').html(response.msg);
+                    $('#output').html(response.msg);
                 }
                 setTimeout(function(){
                     $('#form').addClass('success');
@@ -150,3 +164,31 @@ $('#form').validate({
         });
     }
 });
+
+/*
+>>================================================================================>
+Social Nav Lock-In
+>>================================================================================>
+*/
+
+var viewportWidth;
+
+$(window).on('load resize', function(){
+    viewportWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+}).trigger('resize');
+
+$(window).on('scroll resize', function(){
+    if(viewportWidth > 767){
+
+        if($(window).scrollTop() >= $('#footer').offset().top - $(window).height()){
+            $('#menu nav.social').css({
+                position: 'absolute',
+                top: $('#footer').offset().top - ($(window).height()/2)
+            })
+        }else{
+            $('#menu nav.social').attr('style', '');
+        }
+    }else{
+        $('#menu nav.social').attr('style', '');
+    }
+})
