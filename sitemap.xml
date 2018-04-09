@@ -1,22 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
-  <loc>https://hypernetwork.io/</loc>
-  <lastmod>2018-01-22T23:17:21+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://hypernetwork.io/</loc>
+<changefreq>monthly</changefreq>
+<priority>1.00</priority>
 </url>
 <url>
-  <loc>https://hypernetwork.io/HypernetWhitePaper_v1.0.pdf</loc>
-  <lastmod>2018-01-22T23:17:21+00:00</lastmod>
-  <priority>0.95</priority>
+<loc>https://hypernetwork.io/slack.html</loc>
+<changefreq>monthly</changefreq>
+<priority>0.85</priority>
 </url>
-
-
+<url>
+<loc>https://hypernetwork.io/telegram.html</loc>
+<changefreq>monthly</changefreq>
+<priority>0.85</priority>
+</url>
+<url>
+<loc>https://hypernetwork.io/team.html</loc>
+<changefreq>monthly</changefreq>
+<priority>0.85</priority>
+</url>
+<url>
+<loc>https://hypernetwork.io/blog</loc>
+<changefreq>daily</changefreq>
+<priority>0.85</priority>
+</url>
+<url>
+<loc>https://hypernetwork.io/faq.html</loc>
+<changefreq>monthly</changefreq>
+<priority>0.85</priority>
+</url>
+<url>
+<loc>https://hypernetwork.io/HypernetWhitePaper_v1.1.pdf</loc>
+<changefreq>monthly</changefreq>
+<priority>0.85</priority>
+</url>
+<url>
+<loc>https://hypernetwork.io/index.html</loc>
+<changefreq>monthly</changefreq>
+<priority>0.69</priority>
+</url>
+<url>
+<loc>https://hypernetwork.io/blog/index.html</loc>
+<changefreq>daily</changefreq>
+<priority>0.69</priority>
+</url>
+<url>
+<loc>https://hypernetwork.io/blog/welcome_to_the_hypernet.html</loc>
+<changefreq>never</changefreq>
+<priority>0.56</priority>
+</url>
+<url>
+<loc>https://hypernetwork.io/blog/why_hypernet.html</loc>
+<changefreq>never</changefreq>
+<priority>0.56</priority>
+</url>
+<url>
+<loc>https://hypernetwork.io/blog/how_hypernet_recreating.html</loc>
+<changefreq>never</changefreq>
+<priority>0.56</priority>
+</url>
+<url>
+<loc>https://hypernetwork.io/blog/core_values.html</loc>
+<changefreq>never</changefreq>
+<priority>0.56</priority>
+</url>
 </urlset>

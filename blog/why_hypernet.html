@@ -10,19 +10,19 @@
         <!-- End Google Tag Manager -->
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Hypernet.</title>
+        <title>Blog | Hypernet.</title>
         <meta name="description" content="Connecting the computing power of any device around the world.">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
         <!--Icons-->
 
-        <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
-        <link rel="manifest" href="favicons/manifest.json">
-        <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#000000">
-        <link rel="shortcut icon" href="favicons/favicon.ico">
-        <meta name="msapplication-config" content="favicons/browserconfig.xml">
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+        <link rel="manifest" href="/favicons/manifest.json">
+        <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#000000">
+        <link rel="shortcut icon" href="/favicons/favicon.ico">
+        <meta name="msapplication-config" content="/favicons/browserconfig.xml">
         <meta name="theme-color" content="#ffffff">
 
         <!--Facebook-->
@@ -44,11 +44,13 @@
         <meta name="twitter:description" content="Connecting the computing power of any device around the world.">
         
         <!--Fonts-->
+
         <link rel="stylesheet" href="/css/mta1nkc.css">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:600" rel="stylesheet"> -->
 
         <!--Main Stylesheet-->
 
-        <link rel="stylesheet" href="css/min/style.min.css">
+        <link rel="stylesheet" href="/css/min/style.min.css">
 
         <!-- Facebook Pixel Code -->
 
@@ -61,6 +63,7 @@
             fbq('init', '562139674130030');
             fbq('init', '2014180892238969');
             fbq('track', 'PageView');
+            fbq('track', 'ViewContent');
         </script>
         
         <noscript>
@@ -76,7 +79,8 @@
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D9LHBD"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
-        <div id="front-page">
+
+        <div id="sub-page">
 
             <!--
             >>================================================================================>
@@ -84,44 +88,19 @@
             >>================================================================================>
             -->
 
-            <!--Loading-->
-
-            <div id="loading">
-                <div id="animated-logo">
-                    <div class="logo">
-                        <span class="vertical">
-                            <span></span>
-                        </span>
-                        <span class="vertical">
-                            <span></span>
-                        </span>
-                        <span class="horizontal">
-                            <span></span>
-                        </span>
-                        <svg viewbox="0 0 36 36" >
-                          <path class="circle" stroke-dasharray="100, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                        </svg>
-                    </div>
-                    <span class="flare"></span>
-                </div>
-                <div id="space-curtains">
-                    <div></div>
-                </div>
-            </div>
-
             <!--Background Video-->
-            
+
             <div id="background-video">
                 <video loop autoplay playsinline>
-                    <source src="video/background.mp4" type="video/mp4">
+                    <source src="/video/background.mp4" type="video/mp4">
                 </video>
             </div>
 
             <!--Logo-->
 
-            <h1 class="site-logo">
+            <a class="site-logo" href="/index.html">
                 <span>Hypernet.</span>
-            </h1>
+            </a>
 
             <!--Burger-->
 
@@ -139,24 +118,24 @@
 
             <section id="menu">
                 <div class="container">
-                    
+
                     <!--Primary Navigation-->
-                    
+
                     <nav class="primary-nav">
                         <ul>
                             <li class="home">
-                                <a href="index.html">
+                                <a href="/index.html">
                                     <span>Home</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="team.html">Team</a>
+                                <a href="/team.html">Team</a>
                             </li>
-                            <li>
+                            <li class="current-menu-item">
                                 <a href="/blog/">Blog</a>
                             </li>
                             <li>
-                                <a href="faq.html">FAQ</a>
+                                <a href="/faq.html">FAQ</a>
                             </li>
                             <li>
                                 <a class="white-paper" href="https://docs.google.com/gview?url=https://hypernetwork.io/HypernetWhitePaper_v1.1.pdf" target="_blank" rel="noopener">White Paper</a>
@@ -250,11 +229,111 @@
             -->
 
             <main>
-                <div>
-                    <h2>Hypernet: Connecting the computing power of any device around the world.</h2>
-                    
-                    <!--Form-->
+                <div class="container">
+                    <h1>Blog</h1>
+                    <p class="lead-in">Why Hypernet? Computing Yesterday, Today, and Tomorrow.</p>
+                    <p><a href="https://becominghuman.ai/welcome-to-the-hypernet-powered-by-you-95dbbfe7dfa6" target="_blank" rel="noopener">Hypernet is building an application programming interface</a> (API) that takes your code and runs it across a cluster of internet connected devices, anything from servers to refrigerators (the “industrial internet”), saving you time and money. Many of you have been asking how we can make this claim, and what makes Hypernet a new and useful tool. By the end of this post, you will have a technical understanding of how Hypernet is changing the computing landscape, how you can get involved, and how you can benefit.</p>
+                    <h2>Yesterday</h2>
+                    <p>Yesterday, if you wanted to run a complex program like a deep-learning AI or a weather simulation, you had one of two options: use your local machine or upload it to the cloud. Both these options pose huge problems.</p>
+                    <p><span style="font-weight:bold">Local Machines:</span> Your local machine may be too weak to perform the task you’re interested in. Even Google, with its huge server banks, took two weeks to train its flagship Inception AI, and every time they want to modify it, they have to train it again. Imagine how long it would take you to do that on your own computer — a year? Maybe longer? Since the average person doesn’t have the money to spend on a server bank or the time to waste running programs locally, this solution doesn’t make sense.</p>
+                    <p><span style="font-weight:bold">Cloud Computing:</span> Even the cloud has major limitations. The idea of subscription cloud services is that you can “buy time” on a bigger, better computer, basically leasing it for the time it takes to run your program. But these computers are expensive, and their cost gets passed on to you. Also, there is a limited number of these computers available, so not only do you need to fight with others for a modest number of computers, but if you want to requisition 100,000 of them to run a massively parallel program, no company would be able to service that. Trust us — we’ve tried calling a company and asking for time on 100,000 separate computers, and all we got was a very confused and embarrassed team of engineers on the other line.</p>
+                    <p>There’s also the issue of latency; these computers are far away from you, meaning in practice it takes time just to send your data back and forth with a data center, let alone compute the answer.</p>
+                    <p>Clearly, <span style="font-weight:bold">cloud computing has high overhead costs, problems running massively parallel programs, and inherent latency</span> that make it practically useless for many applications, including real-time ones.</p>
+                    <h2>​Today</h2>
+                    <p>​<span style="font-weight:bold">Yesterday is over:</span> some companies have identified the same problems with local or cloud programming. Simply identifying that there is a problem is not enough. What you need is the ability to run any program you want — parallel, vectorized, anything — on a distributed network efficiently and completely decentralized. No other cloud or distributed computing company can do that. Other distributed computing solutions can only handle trivial algorithms like rendering or can only maximize specially formatted code instead of allowing you to run any problem in parallel like on the Hypernet.</p>
+                    <h2>Tomorrow</h2>
+                    <p>​<span style="font-weight:bold">If the cloud is yesterday and distributed computing is today, the Hypernet is tomorrow.</span></p>
+                    <p>Hypernet solves all the problems posed by servers and the cloud. As devices join our network, you don’t have to pay for the cost of those devices. Furthermore, the combined power of those devices is greater than that of a server system. Also, Hypernet distributes the computational workload across a cluster of internet connected devices, starting with the ones nearest to you (subject to your constraints for processor speed, RAM, etc.) This means you don’t pay a hardware premium and you don’t have to worry about having too few computers or too much latency.</p>
+                    <p>If you’re excited about the implications of Hypernet technology and are wondering how it works along with more technical details, stay tuned for our next post. We’ll reveal exactly how our algorithms run and how they are different from anything else available.</p>
+                    <p>​Until then, feel free to contact us on <a href="https://is.gd/hypernet" target="_blank" rel="noopener">Slack</a> or <a href="https://www.reddit.com/r/HypernetComputing" target="_blank" rel="noopener">Reddit</a>.</p>
+                    <p>Best,</p>
+                    <p>- Ivan Ravlich and the Hypernet team</p>
+                </div>
+            </main>
 
+            <!--
+            >>================================================================================>
+            Footer
+            >>================================================================================>
+            -->
+
+            <footer id="footer">
+                <div class="container large">
+
+                    <!--Logo-->
+
+                    <a class="logo" href="/index.html">
+                        <img src="/img/site-logo-white.svg" alt="Hypernet.">
+                    </a>
+
+                    <!--Boilerplate & Social Navigation-->
+
+                    <div class="boilerplate-social">
+                        <p>Hypernet: Connecting the computing power of any device around the world.</p>
+                        <nav class="social">
+                            <ul>
+                                <li>
+                                    <a class="email" href="mailto:hypernet@hypernetwork.io" target="_blank" rel="noopener">
+                                        <svg height="10.7" viewBox="0 0 16.1 10.7" width="16.1" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14 0h-11.9l6 4.1zM8.1 6.6l-8.1-5.6v9.7h16.1v-9.7z"/>
+                                        </svg>
+                                        <span>Email</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="facebook" href="https://www.facebook.com/GoHypernet/" target="_blank" rel="noopener">
+                                        <svg height="15.6" viewBox="0 0 7.2 15.6" width="7.2" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.2 5.1h-2.4v-1.7c0-.6.4-.7.7-.7h1.7v-2.7h-2.4c-2.7 0-3.3 2-3.3 3.3v1.8h-1.5v2.8h1.5v7.8h3.2v-7.8h2.3l.2-2.8z"/>
+                                        </svg>
+                                        <span>Facebook</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="twitter" href="https://twitter.com/gohypernet" target="_blank" rel="noopener">
+                                        <svg height="27.9" viewBox="0 0 31.9 27.9" width="31.9" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M31.9 3.3c-1.2.6-2.4.9-3.8 1.1 1.4-.9 2.4-2.2 2.9-3.9-1.3.8-2.7 1.4-4.2 1.7-1.1-1.3-2.8-2.2-4.7-2.2-3.6 0-6.5 3.1-6.5 7 0 .5.1 1.1.2 1.6-5.5-.2-10.4-3.1-13.6-7.3-.6 1-.9 2.2-.9 3.5 0 2.4 1.2 4.6 2.9 5.9-1.1 0-2.1-.3-3-.9v.1c0 3.4 2.3 6.2 5.2 6.9-.4.2-1 .2-1.6.2-.4 0-.8 0-1.2-.1.8 2.8 3.2 4.8 6.1 4.9-2.2 1.9-5.1 3-8.1 3-.5 0-1.1 0-1.6-.1 2.9 2 6.3 3.2 10 3.2 12 0 18.6-10.7 18.6-20v-.9c1.3-1 2.4-2.3 3.3-3.7z"/>
+                                        </svg>
+                                        <span>Twitter</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="medium" href="https://medium.com/@hypernet" target="_blank" rel="noopener">
+                                        <svg height="104" viewBox="0 0 131 104" width="131" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.5 21.2c.2-1.6-.5-3.2-1.7-4.3l-12.1-14.7v-2.2h38l29.3 64.4 25.8-64.4h36.2v2.2l-10.5 10c-.9.7-1.3 1.8-1.2 2.9v73.7c-.2 1.1.3 2.2 1.2 2.9l10.2 10v2.2h-51.3v-2.2l10.6-10.2c1-1 1-1.3 1-2.9v-59.6l-29.4 74.7h-4l-34.2-74.7v50.1c-.3 2.1.4 4.2 1.9 5.7l13.7 16.8v2.2h-39v-2.2l13.8-16.7c1.5-1.5 2.1-3.7 1.8-5.7v-58z" />
+                                        </svg>
+                                        <span>Medium</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="reddit" href="https://www.reddit.com/r/HypernetComputing" target="_blank" rel="noopener">
+                                        <svg height="476.4" viewBox="0 0 535.8 476.4" width="535.8" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M535.8 241.8c-1.2-32.4-28.4-57.7-60.9-56.6-14.4.5-28.1 6.4-38.5 16.3-45.8-31.2-99.6-48.3-154.9-49.5l26.1-125.5 86.1 18.1c2.4 22.1 22.2 38.1 44.3 35.7 22.1-2.4 38.1-22.2 35.7-44.3-2.4-22.1-22.2-38.1-44.3-35.7-12.7 1.3-24.1 8.7-30.4 19.7l-98.6-19.7c-6.7-1.5-13.4 2.7-14.9 9.5v.2l-29.7 139.6c-56 .9-110.5 18.1-156.9 49.5-23.6-22.2-60.8-21.1-83 2.6-22.2 23.6-21.1 60.8 2.6 83 4.6 4.3 9.9 8 15.8 10.6-.4 5.9-.4 11.8 0 17.7 0 90.1 105 163.4 234.5 163.4s234.5-73.2 234.5-163.4c.4-5.9.4-11.8 0-17.7 20.2-10.1 32.9-30.9 32.5-53.5zm-402.3 40.3c0-22.2 18.1-40.3 40.3-40.3 22.2 0 40.3 18.1 40.3 40.3 0 22.2-18.1 40.3-40.3 40.3-22.3-.2-40.3-18.1-40.3-40.3zm233.7 112.2v-1.6c-28.6 21.5-63.6 32.5-99.4 31-35.8 1.5-70.8-9.5-99.4-31-3.8-4.6-3.1-11.5 1.5-15.3 4-3.3 9.7-3.3 13.8 0 24.2 17.7 53.7 26.7 83.7 25.3 30 1.6 59.6-7 84.1-24.5 4.4-4.3 11.6-4.2 15.9.2s4.2 11.6-.2 15.9zm-5.4-71.9c-22.3-.2-40.3-18.1-40.3-40.3s18.1-40.3 40.3-40.3c22.2 0 40.3 18.1 40.3 40.3 0 22.2-18.1 40.3-40.3 40.3z"/>
+                                        </svg>
+                                        <span>Reddit</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="telegram" href="https://t.me/joinchat/H-DkTAx1R8A0HvY6vNs5Xw" target="_blank" rel="noopener">
+                                        <svg height="12.6" viewBox="0 0 14.4 12.6" width="14.4" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M.3 6l3.3 1.2 1.3 4.1c.1.3.4.4.6.2l1.9-1.5c.2-.2.5-.2.7 0l3.3 2.4c.2.2.6 0 .6-.2l2.5-11.8c.1-.3-.2-.6-.5-.4l-13.7 5.3c-.4.1-.4.6 0 .7zm4.4.6l6.5-4c.1-.1.2.1.1.2l-5.4 5c-.2.2-.3.4-.3.6l-.2 1.4c0 .2-.3.2-.3 0l-.7-2.5c-.1-.2 0-.5.3-.7z" id="XMLID_3_"/>
+                                        </svg>
+                                        <span>Telegram</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="slack" href="https://is.gd/hypernet" target="_blank" rel="noopener">
+                                        <svg height="80.1" viewBox="0 0 79.9 80.1" width="79.9" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M79.6 42.6c-1.1-3.4-4.8-5.2-8.2-4.1l-8.1 2.7-5.4-16.1 8.1-2.7c3.4-1.1 5.2-4.8 4.1-8.2-1.1-3.4-4.8-5.2-8.2-4.1l-8.1 2.7-2.8-8.4c-1.1-3.4-4.8-5.2-8.2-4.1-3.4 1.1-5.2 4.8-4.1 8.2l2.8 8.4-16.7 5.6-2.8-8.4c-1.1-3.4-4.8-5.2-8.2-4.1-3.4 1.1-5.2 4.8-4.1 8.2l2.8 8.4-8.1 2.7c-3.4 1.1-5.2 4.8-4.1 8.2.9 2.6 3.4 4.3 6 4.4.7.1 1.5-.1 2.2-.3l8.1-2.7 5.4 16.1-8.1 2.7c-3.4 1.1-5.2 4.8-4.1 8.2.9 2.6 3.4 4.3 6 4.4.7.1 1.5-.1 2.2-.3l8.1-2.7 2.8 8.4c.9 2.6 3.4 4.3 6 4.4.7.1 1.5-.1 2.2-.3 3.4-1.1 5.2-4.8 4.1-8.2l-2.8-8.4 16.7-5.6 2.8 8.4c.9 2.6 3.4 4.3 6 4.4.7.1 1.5-.1 2.2-.3 3.4-1.1 5.2-4.8 4.1-8.2l-2.8-8.4 8.1-2.7c3.4-1.1 5.2-4.8 4.1-8.2zm-45.3 8.5l-5.4-16.1 16.7-5.6 5.4 16.1-16.7 5.6z"/>
+                                        </svg>
+                                        <span>Slack</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!--Form-->
+                    
                     <form id="form" method="get" action="https://hypernetwork.us17.list-manage.com/subscribe/post-json?u=8226cb9cee3e06afdcd02e538&amp;id=a1589a9719&amp;c=?" target="_blank">
                         <div class="input-group">
                             <label for="email-field">Sign Up for our Newsletter</label>
@@ -278,16 +357,16 @@
                                 <svg height="13" width="11" viewBox="0 0 10.1 9" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M5.7 0l-1.4 1.4 2 2.1h-6.3v2h6.3l-2 2 1.4 1.5 4.4-4.5z"/>
                                 </svg>
-                                <span>Get Updates</span>
+                                <span>Sign Up</span>
                             </button>
                         </div>
                     </form>
                 </div>
-            </main>
+            </footer>
         </div>
         
         <script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.0.min.js"><\/script>')</script>
-        <script src="js/min/scripts.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/js/vendor/jquery-3.2.0.min.js"><\/script>')</script>
+        <script src="/js/min/scripts.min.js"></script>
     </body>
 </html>
