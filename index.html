@@ -1,6 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
+        
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -8,6 +9,7 @@
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-5D9LHBD');</script>
         <!-- End Google Tag Manager -->
+
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Hypernet.</title>
@@ -44,7 +46,8 @@
         <meta name="twitter:description" content="Connecting the computing power of any device around the world.">
         
         <!--Fonts-->
-        <link rel="stylesheet" href="/css/mta1nkc.css">
+
+        <link rel="stylesheet" href="css/mta1nkc.css">
 
         <!--Main Stylesheet-->
 
@@ -76,6 +79,7 @@
         <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D9LHBD"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <!-- End Google Tag Manager (noscript) -->
+
         <div id="front-page">
 
             <!--
@@ -250,7 +254,10 @@
             -->
 
             <main>
-                <div>
+
+                <!--Intro-->
+                
+                <section id="intro">
                     <h2>Hypernet: Connecting the computing power of any device around the world.</h2>
                     
                     <!--Form-->
@@ -282,7 +289,40 @@
                             </button>
                         </div>
                     </form>
-                </div>
+                </section>
+
+                <!--Intro Video-->
+                
+                <section id="intro-video">
+
+                    <!--Video CTA-->
+                    
+                    <div id="video-cta">
+                        <button class="open video-expand-toggle">
+                            <svg height="24" viewBox="0 0 15.5 24" width="15.5" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.5 24l-3.5-3.5 8.5-8.5-8.5-8.5 3.5-3.5 12 12z"/>
+                            </svg>
+                        </button>
+                        <div class="container large">
+                            <img src="img/intro-video-poster-frame.png" alt="">
+                        </div>
+                    </div>
+
+                    <!--Video Modal-->
+
+                    <div id="video-modal">
+                        <button class="close video-expand-toggle">
+                            <svg height="21.5" viewBox="0 0 21.5 21.5" width="21.5" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.5 18.6l-7.9-7.9 7.9-7.8-2.9-2.9-7.9 7.8-7.8-7.8-2.9 2.9 7.8 7.8-7.8 7.9 2.9 2.9 7.8-7.9 7.9 7.9z"/>
+                            </svg>
+                        </button>
+                        <div class="container large">
+                            <video controls playsinline poster="img/intro-video-poster-frame.png" preload="none">
+                                <source src="video/intro-video.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </section>
             </main>
         </div>
         

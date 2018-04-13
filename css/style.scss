@@ -19,7 +19,7 @@ Development Notes
 /*
  * Font 1 Weights:
  * >>------------->
- * Regulat      400
+ * Regular      400
  * Demi         600
  * Bold         700
  * Extra Bold   800
@@ -312,7 +312,6 @@ Main Framework
     background-color:#fff;
     top: 0;
     left: 0;
-    
     width: 100%;
     box-shadow: 3.657px 3.41px 43px 0px rgba(0, 0, 0, 0.08);
     z-index: 10;
@@ -634,6 +633,10 @@ UI Components
             transform: translateY(-80%) translateX(100%);
         }
     }
+
+    /*body:not(.video-expanded) #front-page #background-video {
+        min-height: 850px;
+    }*/
 }
 
 /* Mobile 
@@ -1057,24 +1060,123 @@ Mobile
 
 /*
 >>================================================================================>
-Front Page (Home)
+Intro
 >>================================================================================>
 */
 
-#front-page main > div {
+#intro {
     position: relative;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
-#front-page main > div:before {
+#intro:before {
     content:'/';
     position: absolute;
     font-weight: 800;
 }
 
-#front-page main h2 {
+#intro h2 {
     font-weight: 700;
     margin: 0;
 }
+
+/*
+Desktop
+>>---------->
+*/
+
+@media screen and (min-width: 1400px) {
+    #intro h2 {
+        font-size:72px;
+        line-height: 1.2em;
+        letter-spacing: .025em;
+    }
+}
+
+@media screen and (max-width: 1399px) and (min-width: 768px) {
+    #intro {
+        width: 500px;
+    }
+
+    #intro h2 {
+        font-size: 50px;
+        line-height: 1.2em;
+        letter-spacing: .025em;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #intro:before,
+    #intro:after {
+        content:'/';
+        position: absolute;
+        font-size: 70px;
+        font-weight: 800;
+    }
+
+    #intro:before {
+        top: -30px;
+        left: -60px;
+    }
+
+    #intro:after {
+        bottom: -5px;
+        right: -50px;
+    }
+
+    #intro {
+        margin-bottom: 75px;
+    }
+}
+
+/*
+Mobile
+>>---------->
+*/
+
+@media screen and (max-width: 767px) {
+    #intro {
+        padding: 145px 40px 0 40px;
+        margin-bottom: 75px;
+    }
+
+    #intro h2 {
+        position: relative;
+        display: block;
+        margin-bottom: 44px;
+    }
+
+    #intro h2:after {
+        content:'/';
+        position: absolute;
+        font-weight: 800;
+        right: -10px;
+        bottom: -10px;
+    }
+
+    #intro:before,
+    #intro h2:after {
+        font-size: 40px;
+    }
+
+    #intro:before {
+        top: -23px;
+        left: -30px;
+    }
+
+    #intro h2 {
+        font-size:31px;
+        line-height: 1.25em;
+        letter-spacing: .01em;
+    }
+}
+
+/*
+>>================================================================================>
+Front Page-Specific Styles
+>>================================================================================>
+*/
 
 /* Form */
 
@@ -1101,64 +1203,15 @@ Desktop
 >>---------->
 */
 
-@media screen and (min-width: 1400px) {
-    #front-page main {
-        width: 700px;
-    }
-
-    #front-page main h2 {
-        font-size:72px;
-        line-height: 1.2em;
-        letter-spacing: .025em;
-    }
-}
-
-@media screen and (max-width: 1399px) and (min-width: 768px) {
-    #front-page main {
-        width: 500px;
-    }
-
-    #front-page main h2 {
-        font-size: 50px;
-        line-height: 1.2em;
-        letter-spacing: .025em;
-    }
-}
-
 @media screen and (min-width: 768px) {
     #front-page {
-        position: absolute;
-        height: 100%;
+        /*position: absolute;
         width: 100%;
-        min-height: 860px;
-        overflow: hidden;
-        top: 0;
+        top: 0;*/
     }
 
     #front-page main {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-        margin-top: -28px;
-    }
-
-    #front-page main > div:before,
-    #front-page main > div:after {
-        content:'/';
-        position: absolute;
-        font-size: 70px;
-        font-weight: 800;
-    }
-
-    #front-page main > div:before {
-        top: -30px;
-        left: -60px;
-    }
-
-    #front-page main > div:after {
-        bottom: -5px;
-        right: -50px;
+        margin-top: 120px;
     }
 
     /* Form */
@@ -1189,39 +1242,7 @@ Mobile
 */
 
 @media screen and (max-width: 767px) {
-    #front-page main {
-        padding: 145px 40px 0 40px;
-    }
-
-    #front-page main h2 {
-        position: relative;
-        display: block;
-        margin-bottom: 44px;
-    }
-
-    #front-page main h2:after {
-        content:'/';
-        position: absolute;
-        font-weight: 800;
-        right: -10px;
-        bottom: -10px;
-    }
-
-    #front-page main > div:before,
-    #front-page main > h2:after {
-        font-size: 40px;
-    }
-
-    #front-page main > div:before {
-        top: -23px;
-        left: -30px;
-    }
-
-    #front-page main h2 {
-        font-size:31px;
-        line-height: 1.25em;
-        letter-spacing: .01em;
-    }
+    
 }
 
 /*
@@ -2223,6 +2244,159 @@ Mobile
 
 @media screen and (max-width: 599px) {
  
+}
+
+/*
+>>================================================================================>
+Intro Video
+>>================================================================================>
+*/
+
+#intro-video button svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* Video Modal */
+
+#video-modal {
+    position: fixed;
+    transition: background-color 1s ease;
+    background-color:rgba(0,0,0,0);
+    height: 100%;
+    width: 100%;
+    background-image: url(../../img/bio-bg.jpg);
+    background-size: cover;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    transition: opacity 300ms ease, visibility 300ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.video-expanded #video-modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+#video-modal .container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%,-50%);
+}
+
+#video-modal video {
+    display: block;
+    width: 100%;
+}
+
+#video-modal button.close {
+    position: fixed;
+    background-color:#fff;
+    width: 52px;
+    height: 52px;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 500ms ease, visibility 500ms ease, background-color 300ms ease;
+}
+
+.video-expanded #video-modal button.close {
+    opacity: 1;
+    visibility: visible;
+}
+
+.no-touchevents #video-modal button.close:hover {
+    background-color:#3beef9;
+}
+
+.no-touchevents #video-modal button.close:hover svg {
+    fill: #000;
+}
+
+/* Video CTA */
+
+#video-cta {
+    position: relative;
+}
+
+#video-cta button.open {
+    position: absolute;
+    background-color:#3beef9;
+    border-radius: 50%;
+    box-shadow: 4.015px 4.459px 29px 0px rgba(48, 95, 129, 0.18);
+    z-index:1;
+    transition: opacity 300ms ease, visibility 300ms ease, background-color 300ms ease;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.no-touchevents #video-cta button.open:hover {
+    background-color: #000;
+}
+
+.no-touchevents #video-cta button.open:hover svg {
+    fill: #3beef9;
+}
+
+/*
+Desktop
+>>---------->
+*/
+
+@media screen and (min-width: 768px) {
+    #intro-video {
+        margin-bottom: 150px;
+    }
+
+    /* Video CTA */
+
+    #video-cta button.open {
+        width: 74px;
+        height: 74px;
+    }
+
+    #video-cta button.open svg {
+        width: 16px;
+        height: 24px;
+    }
+}
+
+/*
+Mobile
+>>---------->
+*/
+
+@media screen and (max-width: 767px) {
+    #intro-video {
+        margin-bottom: 20px;
+    }
+
+    /* Video CTA */
+
+    #intro-video button.open {
+        width: 64px;
+        height: 64px;
+    }
+
+    #intro-video button.open svg {
+        width: 14px;
+        height: 21px;
+    }
+
+    /* Video Modal */
+
+    #video-cta .container {
+        padding: 0;
+    }
 }
 
 /*
